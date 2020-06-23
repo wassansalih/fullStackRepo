@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "lint": "eslint"
+  },
+  "author": "Wasan",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^7.3.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "tape": "^5.0.1"
+  }
+}
