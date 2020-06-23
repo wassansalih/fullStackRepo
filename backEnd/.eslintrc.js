@@ -11,7 +11,7 @@ module.exports = {
 	"rules": {
 		"indent": [
 			"error",
-			"tab"
+			"tab",
 		],
 		"linebreak-style": [
 			"error",
@@ -25,7 +25,7 @@ module.exports = {
 			"error",
 			"never"
 		],
-		"no-console": 1,
+		"no-console": 0,
 		"no-empty": 0,
 		"no-irregular-whitespace": 0
 	}
