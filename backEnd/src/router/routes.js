@@ -1,8 +1,8 @@
 const express = require("express")
-const app = express()
-const data = require("../controllers")
+let router = express.Router();
+const controller = require("../controllers")
 
-app.get("/time", data.getTime)
-app.get("/metrics", data.getMetrics)
+router.get("/time", controller.getTime)
+router.get("/metrics", controller.getMetrics)
 
-module.exports = app
+module.exports = router

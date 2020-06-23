@@ -9,6 +9,10 @@ const environments = {
 	production: {
 		env: "production",
 		port: 3000
+    },
+    test: {
+		env: "test",
+		port: 3000
 	}
 
 }
