@@ -1,8 +1,8 @@
 const axios = require('axios');
-import environment from '../env-config';
+// import environment from '../env-config';
 
-const htmlFetch = async({ route, method, body }) => {
-    const baseURL = environment.dev.backEndUrl;
+const fetchData = async({ route, method, body }) => {
+    const baseURL = 'http://localhost:5000' // environment.dev.backEndUrl;
     const url = `${baseURL}${route}`;
     const headers = { "Content-Type": "application/json", "authorization": "mysecrettoken" };
 
@@ -16,5 +16,5 @@ const htmlFetch = async({ route, method, body }) => {
 };
 
 export {
-    htmlFetch
+    fetchData
 }

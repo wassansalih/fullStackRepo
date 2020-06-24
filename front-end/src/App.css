@@ -12,3 +12,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.white-border {
+  border: 2px solid white;
+}
+.max-width {
+  width: 100%;
+}

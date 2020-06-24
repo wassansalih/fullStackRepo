@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { htmlFetch } from '../html';
  
 jest.mock('axios');
 describe.only("fetch data", () => {
