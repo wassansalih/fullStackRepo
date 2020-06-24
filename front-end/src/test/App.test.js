@@ -10,12 +10,12 @@ describe("App component testing", () => {
   beforeEach(() => {
     wrapper = shallow(<App />)
   })
-  test('renders learn react link', () => {
+  test('renders main-component dev', () => {
     const component = wrapper.find(`[data-test="main-component"]`)
     expect(component.length).toBe(1)
   })
 
-  test('renders learn react link', () => {
+  test('renders h1 element', () => {
     const component = wrapper.find(`[data-test="main-component-header"]`)
     expect(component.length).toBe(1)
     expect(component.text()).toBe("Full stack project")
