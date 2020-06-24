@@ -8,13 +8,13 @@ function App() {
   return (
     <div className="App" data-test="main-component">
       <header className="App-header">
-      <div class="container">
-            <h1 data-test="main-component-header">Full stack project</h1>
+      <div className="container">
+        <h1 data-test="main-component-header">Full stack project</h1>
         <div class="row">
-          <div class="col">
+          <div className="col white-border max-width">
             <Time />
           </div>
-          <div class="col">
+          <div className="col white-border max-width">
             <Metrics />
           </div>
         </div>
