@@ -4,7 +4,7 @@ const request = require('supertest');
 
 process.env.NODE_ENV = 'test';
 const server = require('../server');
-const result = require('../src/data').data;
+const { timeData } = require('../src/data');
 const { token } = require('../src/data/mySecretData');
 
 // eslint-disable-next-line no-undef
@@ -17,8 +17,10 @@ describe('getTime', () => {
             .expect(200)
             .end((err,res) => {
                 if (err) throw err;
+                
                 expect(res.body).to.be.an('object');
-                expect(res.body.timeData).to.eql(result.timeData);
+                expect(res.body.timeData.properties.epoch.description).to.eqls(timeData.properties.epoch.description);
+                expect(res.body.timeData.properties.epoch.timeInSeconds).to.be.a('number');
             });
     });
     // eslint-disable-next-line no-undef
@@ -31,3 +33,4 @@ describe('getTime', () => {
             });
     });
 });
+

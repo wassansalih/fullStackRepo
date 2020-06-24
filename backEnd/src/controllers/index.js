@@ -1,4 +1,4 @@
-const data = require('../data').data;
+const { timeData } = require('../data');
 const { token } = require('../data/mySecretData');
 
 // eslint-disable-next-line no-unused-vars
@@ -13,9 +13,10 @@ exports.getTime = (req, res, next) => {
             }
         });
     } else {
+        timeData.properties.epoch.timeInSeconds = new Date().getTime() / 1000;
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json({
-            timeData: data.timeData
+            timeData
         });
     }
 };
