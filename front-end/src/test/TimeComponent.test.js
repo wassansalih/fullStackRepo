@@ -8,7 +8,7 @@ Enzyme.configure({ adapter: new EnzymeAsapter });
 describe("Time component testing", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<Time/>)
+    wrapper = shallow(<Time serverTime="12345" diffTime="25"/>)
   });
   test('renders title', () => {
     const element = wrapper.find(`[data-test="time-component-title"]`)
@@ -18,7 +18,7 @@ describe("Time component testing", () => {
   test ('renders  server-time', () => {
     const element = wrapper.find(`[data-test="time-component-server-time"]`)
     expect(element.length).toBe(1)
-    expect(element.text()).toContain('Server time in seconds:')
+    expect(element.text()).toContain('Server time in seconds: 12345')
   });
 
   test('renders difference-time ', () => {

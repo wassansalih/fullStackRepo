@@ -1,7 +1,7 @@
-import React from 'react'
-import Enzyme, { shallow } from 'enzyme'
-import EnzymeAsapter from 'enzyme-adapter-react-16'
-import App from '../App'
+import React from 'react';
+import Enzyme, { shallow, mount } from 'enzyme';
+import EnzymeAsapter from 'enzyme-adapter-react-16';
+import App from '../App';
 
 Enzyme.configure({ adapter: new EnzymeAsapter });
 
@@ -20,5 +20,4 @@ describe("App component testing", () => {
     expect(component.length).toBe(1)
     expect(component.text()).toBe("Full stack project")
   })
-
 })

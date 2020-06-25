@@ -1,9 +1,12 @@
 import React from 'react';
-
-function Metrics() {
+import './Component.css';
+function Metrics(props) {
+  console.log(props, "1111")
   return (
     <div  data-test="metrics-component">
-        <p>Metrics COMPONENT</p>
+      <h3 className="green-bold-font">Metrics COMPONENT</h3>
+      <p> ----------------------------------- </p>
+      <p>{props.metricsData}</p>
     </div>
   );
 }
