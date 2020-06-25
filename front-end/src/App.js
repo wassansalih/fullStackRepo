@@ -65,7 +65,6 @@ class App extends React.Component {
     return (
       <div className="App" data-test="main-component">
         <header className="App-header">
-          <p>{typeof(this.state.metricsData)}</p>
         <div className="container">
           <h1 data-test="main-component-header">Full stack project</h1>
           <div className="row">

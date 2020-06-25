@@ -1,4 +1,9 @@
 .green-bold-font {
-    color: turquoise;
-    font-weight: bold;
+  color: turquoise;
+  font-weight: bold;
+}
+
+.metrics-font-format {
+  font-size: calc(5px + 1vmin);
+  color: white;
 }
