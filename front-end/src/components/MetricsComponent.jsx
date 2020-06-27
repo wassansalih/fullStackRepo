@@ -1,5 +1,6 @@
 import React from 'react';
 import './Component.css';
+import PropTypes from 'prop-types';
 function Metrics(props) {
   return (
     <div  data-test="metrics-component">
@@ -9,5 +10,7 @@ function Metrics(props) {
     </div>
   );
 }
-
+Metrics.propTypes = {
+  metricsData: PropTypes.string
+}
 export default Metrics;

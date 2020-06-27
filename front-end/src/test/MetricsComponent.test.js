@@ -20,7 +20,7 @@ describe("Metrics component testing", () => {
     expect(component.length).toBe(1)
   });
   test('renders metrics value ', () => {
-    const props = {metricsData: "123"};
+    const props = {metricsData: "any metric data"};
     wrapper = shallow(<Metrics {...props}/>)
     const component = wrapper.find(`[data-test="metrics-value"]`)
     expect(component.length).toBe(1)
