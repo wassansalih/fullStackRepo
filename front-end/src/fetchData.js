@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from 'axios';
 // import environment from '../env-config';
 
 const fetchData = async({ route, method, body }) => {
