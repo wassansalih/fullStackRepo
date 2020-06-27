@@ -15,9 +15,9 @@ describe('getTime', () => {
             .get('/time')
             .set({ Authorization: token })
             .expect(200)
-            .end((err,res) => {
+            .end((err, res) => {
                 if (err) throw err;
-                
+
                 expect(res.body).to.be.an('object');
                 expect(res.body.timeData.properties.epoch.description).to.eqls(timeData.properties.epoch.description);
                 expect(res.body.timeData.properties.epoch.timeInSeconds).to.be.a('number');
@@ -28,7 +28,7 @@ describe('getTime', () => {
         request(server)
             .get('/time')
             .expect(403)
-            .end((err,res) => {
+            .end((err, res) => {
                 expect(res.body.error.message).to.eql('UnAuthorized user');
             });
     });

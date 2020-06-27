@@ -1,5 +1,6 @@
+/* eslint-disable no-undef */
 import axios from 'axios';
- 
+
 jest.mock('axios');
 describe.only("fetch data", () => {
     beforeEach(() => {

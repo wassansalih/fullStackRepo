@@ -26,6 +26,7 @@ class App extends React.Component {
 
     const timeData = await fetchData({route: '/time', method: 'GET'});
     if(!timeData.error) {
+      console.log(timeDate, "3333333333333333")
       serverTimeInMilliseconds = timeData.data.timeData.properties.epoch.timeInSeconds * 1000;
     }
     const metrics = await fetchData({route: '/metrics', method: 'GET'});
