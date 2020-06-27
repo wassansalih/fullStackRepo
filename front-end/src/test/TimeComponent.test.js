@@ -40,4 +40,4 @@ describe("Time component testing", () => {
     expect(formatedTime).toBe('11:14:36.7');
   });
 
-})
+});
