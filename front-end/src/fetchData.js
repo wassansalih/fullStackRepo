@@ -5,7 +5,6 @@ const fetchData = async({ route, method, body }) => {
     const baseURL = 'http://localhost:5000' // environment.dev.backEndUrl;
     const url = `${baseURL}${route}`;
     const headers = { "Content-Type": "application/json", "authorization": "mysecrettoken" };
-
     return await axios({
         method,
         url,
@@ -15,6 +14,4 @@ const fetchData = async({ route, method, body }) => {
     });
 };
 
-export {
-    fetchData
-}
+export { fetchData }
