@@ -3,7 +3,7 @@ import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import EnzymeAsapter from 'enzyme-adapter-react-16';
 import App from '../App';
-
+import { fetchData } from '../fetchData';
 
 jest.mock('../fetchData');
 
@@ -28,23 +28,20 @@ describe("App component testing", () => {
     expect(component.text()).toBe("Full stack project")
   });
 
-  describe.only('should call fetchData in componentDidMount', () => {
+  describe('should call fetchData in componentDidMount', () => {
+    test('should fetch serverTime', async () => {
+      const state = {
+        serverTime: 555,
+        diffTime: null,
+        time: null,
+        fetchTimer: 30,
+        metricsData: null
+      }
+      wrapper.setState(state);
+      await wrapper.instance().componentDidMount();
+      expect(wrapper.state('serverTime')).toEqual(55555000);
+      expect(wrapper.state('metricsData')).toEqual('Metrics text');
 
-    // it('should fetch serverTime', async () => {
-
-    //   const state = {
-    //     serverTime: 555,
-    //     diffTime: null,
-    //     time: null,
-    //     fetchTimer: 30,
-    //     metricsData: null
-    //   }
-    //   wrapper.setState(state);
-    //   await wrapper.instance().componentDidMount();
-
-    //   console.log(wrapper.state('serverTime'), "2222222222")
-    //   expect(wrapper.state('serverTime')).toEqual(555555555555);
-
-    // });
+    });
   });
 });
