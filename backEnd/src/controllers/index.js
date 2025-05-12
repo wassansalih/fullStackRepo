@@ -21,3 +21,13 @@ exports.getTime = (req, res, next) => {
     }
 };
 
+// eslint-disable-next-line no-unused-vars
+exports.getAny = (req, res, next) => {
+    timeData.properties.epoch.timeInSeconds = new Date().getTime() / 1000;
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json({
+        data: 'Hello world'
+    });
+
+};
+
